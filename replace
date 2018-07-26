@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+			  <style type="text/css">
+
+			</style>
+		</head>
+		<body>
+			<div id='aa'>
+				<img src="cold.png">
+			</div>
+			<div id='bb' style='display:none'>aa,,bb</div>
+			<div id='cc'></div>
+			<div id='gg'></div>
+			<script>
+				var text=$('#bb').html().split(',,');
+				var text1=[];
+				for(i=0;i<text.length;i++)
+				{
+					text1.push('<span class="ab">'+text[i]+'</span>')
+				}				
+$('#cc').html(text1)
+$('#aa').click(function(){
+var id=$(this).html();
+$('.ab').click(function(){
+$(this).html(id);
+}); });
+</script>
+</body>
+</html>
